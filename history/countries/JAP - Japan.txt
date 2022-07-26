@@ -15,6 +15,31 @@ if = {
 	set_oob = "JAP_1936_land_nsb"
 }
 
+set_variable = { X_JAP_propaganda_3_cost = 15 }
+set_variable = { X_JAP_propaganda_4_cost = 15 }
+set_variable = { X_JAP_propaganda_5_cost = 15 }
+set_variable = { X_JAP_propaganda_6_cost = 15 }
+set_variable = { X_JAP_propaganda_7_cost = 15 }
+set_variable = { X_JAP_propaganda_8_cost = 15 }
+set_variable = { X_JAP_propaganda_9_cost = 15 }
+set_variable = { X_JAP_propaganda_10_cost = 15 }
+set_variable = { X_JAP_propaganda_11_cost = 15 }
+set_variable = { X_JAP_propaganda_12_cost = 15 }
+set_variable = { X_JAP_propaganda_13_cost = 15 }
+set_variable = { X_JAP_propaganda_14_cost = 15 }
+set_variable = { X_JAP_propaganda_15_cost = 15 }
+set_variable = { X_JAP_propaganda_16_cost = 15 }
+set_variable = { X_JAP_propaganda_17_cost = 15 }
+set_variable = { X_JAP_propaganda_18_cost = 15 }
+set_variable = { X_JAP_propaganda_19_cost = 15 }
+set_variable = { X_JAP_propaganda_20_cost = 15 }
+set_variable = { X_JAP_propaganda_21_cost = 15 }
+set_variable = { X_JAP_propaganda_22_cost = 15 }
+set_variable = { X_JAP_propaganda_23_cost = 15 }
+set_variable = { X_JAP_propaganda_24_cost = 15 }
+set_variable = { X_JAP_propaganda_25_cost = 15 }
+set_variable = { X_JAP_propaganda_26_cost = 15 }
+
 recruit_character = JAP_tetsu_katayama
 recruit_character = JAP_kyuichi_tokuda
 recruit_character = JAP_okada_keisuke
@@ -105,7 +130,7 @@ add_ideas = {
 	partial_economic_mobilisation
 	shintoism
 	protectionism
-
+	
 	traditional_architecture
 	JAP_duplicate_research_efforts
 	JAP_militarism
@@ -213,14 +238,14 @@ if = {
 }
 
 set_technology = {
-	#direct_fire = 1
+	direct_fire = 1
 	standard_industry = 1
 	basic_train = 1
 	jap_infantry_weapons_1 = 1
 	jap_infantry_weapons_upgrade_1 = 1
 	jap_heavy_infantry_weapons_1 = 1
 	jap_heavy_infantry_weapons_upgrade_1 = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_recon = 1
 	tech_engineers = 1
 	tech_military_police = 1
@@ -255,13 +280,8 @@ set_technology = {
 	frontal_tanks = 1
 
 	dogfighting = 1
-
+	
 	fleet_in_being = 1
-	line_of_battle = 1
-	floating_airfield = 1
-	carrier_primacy = 1
-	battlefleet_support = 1
-	torpedo_tactics = 1
 }
 if = {
 	limit = {
@@ -284,6 +304,67 @@ if = {
 		jap_medium_tank_chassis_1 = 1
 		jap_heavy_tank_chassis_0 = 1
 	}
+	create_equipment_variant = {
+		name = "Otsu Gata Sensha"
+		type = tank_jap_light_chassis_2
+		parent_version = 0
+		modules = {
+			main_armament_slot = jap_tank_small_main_armament_1
+			turret_type_slot = tank_jap_otsu_gata_sensha_turret_type_1
+			engine_type_slot = tank_jap_tiny_engine_type_1
+			suspension_type_slot = tank_bell_crank_suspension
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+		}
+		icon = "gfx/interface/technologies/jap_light_0.dds"
+	}
+	create_equipment_variant = {
+		name = "Ha Go"
+		type = tank_jap_light_chassis_3
+		parent_version = 0
+		modules = {
+			main_armament_slot = jap_tank_small_main_armament_3
+			turret_type_slot = tank_jap_ha_go_turret_type_1
+			engine_type_slot = tank_jap_tiny_engine_type_4
+			suspension_type_slot = tank_bell_crank_suspension
+			special_type_slot_1 = tank_jap_radio_module_1
+			special_type_slot_2 = empty
+		}
+		icon = "gfx/interface/technologies/jap_light_1.dds"
+	}
+	create_equipment_variant = {
+		name = "Yi-Go"
+		type = tank_jap_medium_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = jap_tank_small_main_armament_2
+			turret_type_slot = tank_jap_i_go_turret_type_1
+			engine_type_slot = tank_jap_small_engine_type_1
+			suspension_type_slot = tank_bell_crank_suspension
+			special_type_slot_1 = tank_jap_radio_module_1
+			special_type_slot_2 = empty
+		}
+		icon = "gfx/interface/technologies/jap_medium_1.dds"
+	}
+	create_equipment_variant = {
+		name = "Type 91"
+		type = tank_jap_heavy_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = jap_tank_small_main_armament_2
+			turret_type_slot = tank_jap_type_91_turret_type_1
+			engine_type_slot = tank_jap_semi_large_engine_type_1
+			suspension_type_slot = tank_bell_crank_suspension
+			special_type_slot_1 = empty
+			special_type_slot_2 = jap_secondary_turret_mg_armament_1
+			special_type_slot_3 = jap_secondary_turret_mg_armament_1
+		}
+#		upgrades = {
+#			tank_nsb_engine_upgrade = 0
+#			tank_nsb_armor_upgrade = 0
+#		}
+		icon = "gfx/interface/technologies/jap_heavy_0.dds"
+	}
 }
 if = {
 	limit = {
@@ -296,7 +377,7 @@ if = {
 		mtg_landing_craft = 1
 		depth_charges = 1
 		k_guns = 1
-
+		
 		jap_frigate_1 = 1
 		jap_frigate_2 = 1
 		jap_destroyer_1 = 1
@@ -388,7 +469,7 @@ if = {
 	}
 }
 if = {
-	limit = {
+	limit = { 
 		NOT = {
 			has_dlc = "Waking the Tiger"
 			has_dlc = "Together for Victory"
@@ -404,7 +485,7 @@ if = {
 	}
 }
 if = {
-	limit = {
+	limit = { 
 		has_dlc = "Waking the Tiger"
 	}
 	set_autonomy = {
@@ -434,7 +515,7 @@ if = {
 		has_dlc = "La Resistance"
 	}
 	create_intelligence_agency = yes
-
+	
 	create_operative_leader = {
 		name = "Yoshiko Kawashima"
 		GFX = GFX_portrait_yoshiko_kawashima
@@ -501,7 +582,7 @@ if = {
 			}
 			obsolete = yes
 		}
-		### Battleship Variants
+		### Battleship Variants	
 		create_equipment_variant = {
 			name = "Ise Class"
 			type = battleship_1
@@ -526,7 +607,7 @@ if = {
 			}
 			obsolete = yes
 		}
-		### Heavy Cruiser Variants
+		### Heavy Cruiser Variants	
 		create_equipment_variant = {
 			name = "Myoko Class"
 			type = heavy_cruiser_1
@@ -539,7 +620,7 @@ if = {
 			}
 			obsolete = yes
 		}
-		### Light Cruiser Variants
+		### Light Cruiser Variants	
 		create_equipment_variant = {
 			name = "Kuma Class"
 			type = light_cruiser_1
@@ -575,8 +656,8 @@ if = {
 				ship_ASW_upgrade = 2
 				ship_anti_air_upgrade = 2
 			}
-		}
-		### Submarine Variants
+		}	
+		### Submarine Variants	
 		create_equipment_variant = {
 			name = "Kaidai III Class"
 			type = submarine_1
@@ -588,7 +669,7 @@ if = {
 				sub_torpedo_upgrade = 2
 			}
 			obsolete = yes
-		}
+		}	
 }
 
 #WA

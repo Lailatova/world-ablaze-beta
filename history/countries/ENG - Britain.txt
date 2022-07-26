@@ -25,6 +25,31 @@ if = {
 	}
 }
 
+set_variable = { X_ENG_propaganda_3_cost = 15 }
+set_variable = { X_ENG_propaganda_4_cost = 15 }
+set_variable = { X_ENG_propaganda_5_cost = 15 }
+set_variable = { X_ENG_propaganda_6_cost = 15 }
+set_variable = { X_ENG_propaganda_7_cost = 15 }
+set_variable = { X_ENG_propaganda_8_cost = 15 }
+set_variable = { X_ENG_propaganda_9_cost = 15 }
+set_variable = { X_ENG_propaganda_10_cost = 15 }
+set_variable = { X_ENG_propaganda_11_cost = 15 }
+set_variable = { X_ENG_propaganda_12_cost = 15 }
+set_variable = { X_ENG_propaganda_13_cost = 15 }
+set_variable = { X_ENG_propaganda_14_cost = 15 }
+set_variable = { X_ENG_propaganda_15_cost = 15 }
+set_variable = { X_ENG_propaganda_16_cost = 15 }
+set_variable = { X_ENG_propaganda_17_cost = 15 }
+set_variable = { X_ENG_propaganda_18_cost = 15 }
+set_variable = { X_ENG_propaganda_19_cost = 15 }
+set_variable = { X_ENG_propaganda_20_cost = 15 }
+set_variable = { X_ENG_propaganda_21_cost = 15 }
+set_variable = { X_ENG_propaganda_22_cost = 15 }
+set_variable = { X_ENG_propaganda_23_cost = 15 }
+set_variable = { X_ENG_propaganda_24_cost = 15 }
+set_variable = { X_ENG_propaganda_25_cost = 15 }
+set_variable = { X_ENG_propaganda_26_cost = 15 }
+
 set_research_slots = 6
 
 set_stability = 0.15
@@ -142,13 +167,13 @@ recruit_character = ENG_bernard_paget
 
 # Starting tech
 set_technology = {
-	#direct_fire = 1
+	direct_fire = 1
 	concentrated_industry = 1
 	basic_train = 1
 	eng_infantry_weapons_1 = 1
 	eng_infantry_weapons_upgrade_1 = 1
 	eng_heavy_infantry_weapons_1 = 1
-	tech_support = 1
+	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
 	tech_military_police = 1
@@ -194,17 +219,10 @@ set_technology = {
 	integrated_support = 1
 
 	dogfighting = 1
-
+	
 	fleet_in_being = 1
 	line_of_battle = 1
-	fleet_squadrons = 1
-	floating_airfield = 1
-	mobile_task_forces = 1
 	battlefleet_support = 1
-	surface_spotters = 1
-	trade_interdiction = 1
-	damage_control_1 = 1
-	fire_control_methods_1 = 1
 }
 if = {
 	limit = {
@@ -221,6 +239,51 @@ if = {
 	set_technology = {
 		eng_light_tank_chassis_1 = 1
 		eng_heavy_tank_chassis_0 = 1
+	}
+	create_equipment_variant = {
+		name = "Vickers Mk VI"
+		type = tank_eng_light_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = eng_tank_mg_armament_2
+			turret_type_slot = tank_eng_vickers_turret_type_1
+			engine_type_slot = tank_eng_tiny_engine_type_1
+			suspension_type_slot = tank_horstmann_suspension
+			#special_type_slot_1 = armour_piercing
+			special_type_slot_1 = tank_eng_radio_module_1
+			special_type_slot_2 = empty
+			special_type_slot_3 = smoke_launchers
+		}
+#		upgrades = {
+#			tank_nsb_engine_upgrade = 0
+#			tank_nsb_armor_upgrade = 0
+#		}
+		icon = "gfx/interface/technologies/eng_light_1.dds"
+	}
+	create_equipment_variant = {
+		name = "A1E1 Independent"
+		type = tank_eng_heavy_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = eng_tank_small_main_armament_1
+			turret_type_slot = tank_eng_independent_turret_type_1
+			engine_type_slot = tank_eng_semi_large_engine_type_1
+			suspension_type_slot = tank_bogie_suspension
+			#special_type_slot_1 = armour_piercing
+			special_type_slot_1 = empty
+			special_type_slot_2 = empty
+			special_type_slot_3 = eng_secondary_turret_mg_armament_1
+			special_type_slot_4 = eng_secondary_turret_mg_armament_1
+			special_type_slot_5 = eng_secondary_turret_mg_armament_1
+			special_type_slot_6 = eng_secondary_turret_mg_armament_1
+			armor_type_slot = empty
+		}
+		
+		#upgrades = {
+		#	tank_nsb_engine_upgrade = 0
+		#	tank_nsb_armor_upgrade = 0
+		#}
+		icon = "gfx/interface/technologies/eng_heavy_0.dds"
 	}
 }
 if = {
@@ -450,7 +513,7 @@ if = {
 	add_to_tech_sharing_group = commonwealth_research
 }
 
-set_politics = {
+set_politics = {	
 	ruling_party = democratic
 	last_election = "1935.11.14"
 	election_frequency = 48
@@ -607,6 +670,115 @@ if = {
 
 ### Ship Variants ###
 
+#create_equipment_variant = {
+#	name = "O/P/R Class"
+#	type = submarine_1
+#	upgrades = {
+#		ship_reliability_upgrade = 1
+#		sub_engine_upgrade = 1
+#		sub_stealth_upgrade = 1
+#		sub_torpedo_upgrade = 1
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "S Class"
+#	type = submarine_1
+#	upgrades = {
+#		ship_reliability_upgrade = 2
+#		sub_engine_upgrade = 2
+#		sub_stealth_upgrade =2
+#		sub_torpedo_upgrade = 2
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "A/B/C/D Class"
+#	type = destroyer_1
+#	upgrades = {
+#		ship_torpedo_upgrade = 1
+#		ship_engine_upgrade = 1
+#		ship_ASW_upgrade = 1
+#		ship_anti_air_upgrade = 1
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Tribal Class"
+#	type = destroyer_1
+#	upgrades = {
+#		ship_torpedo_upgrade = 2
+#		ship_engine_upgrade = 2
+#		ship_ASW_upgrade = 2
+#		ship_anti_air_upgrade = 2
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Emerald Class"
+#	type = light_cruiser_1
+#	upgrades = {
+#		ship_reliability_upgrade = 1
+#		ship_engine_upgrade = 1
+#		ship_gun_upgrade = 1
+#		ship_anti_air_upgrade = 1
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Amphion Class"
+#	type = light_cruiser_1
+#	upgrades = {
+#		ship_reliability_upgrade = 2
+#		ship_engine_upgrade = 2
+#		ship_gun_upgrade = 2
+#		ship_anti_air_upgrade = 2
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Edinburgh Class"
+#	type = light_cruiser_2
+#	upgrades = {
+#		ship_reliability_upgrade = 3
+#		ship_engine_upgrade = 3
+#		ship_gun_upgrade = 3
+#		ship_anti_air_upgrade = 3
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "County Class"
+#	type = heavy_cruiser_1
+#	upgrades = {
+#		ship_reliability_upgrade = 2
+#		ship_engine_upgrade = 2
+#		ship_armor_upgrade = 2
+#		ship_gun_upgrade = 2
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Admiral Class"
+#	type = battle_cruiser_1
+#	upgrades = {
+#		ship_reliability_upgrade = 1
+#		ship_engine_upgrade = 1
+#		ship_armor_upgrade = 1
+#		ship_gun_upgrade = 1
+#	}
+#}
+#
+#create_equipment_variant = {
+#	name = "Nelson Class"
+#	type = battleship_1
+#	upgrades = {
+#		ship_reliability_upgrade = 1
+#		ship_engine_upgrade = 1
+#		ship_armor_upgrade = 1
+#		ship_gun_upgrade = 1
+#	}
+#}
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	### Variants ###
