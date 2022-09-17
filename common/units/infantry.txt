@@ -540,9 +540,10 @@ sub_units = {
 
 		type = {
 			infantry
+			support
 		}
 
-		group = infantry
+		group = support
 
 		categories = {
 			category_support_battalions
