@@ -23,10 +23,10 @@ sub_units = {
 		combat_width = 0
 
 		#Size Definitions
-		max_strength = -0.9
+		max_strength = 0
 		max_organisation = 75
 		default_morale = 1.75
-		manpower = 500
+		manpower = 200
 		training_time = 180
 
 		#Misc Abilities
@@ -44,7 +44,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 10
-			infantry_equipment = 62
+			infantry_equipment = 20
 		}
 
 	}
@@ -96,7 +96,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 10
-			infantry_equipment = 62
+			infantry_equipment = 50
 		}
 
 		plains = {

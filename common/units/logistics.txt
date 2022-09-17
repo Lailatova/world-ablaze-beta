@@ -22,10 +22,10 @@ sub_units = {
 		combat_width = 0
 
 		#Size Definitions
-		max_strength = 1
+		max_strength = 2
 		max_organisation = 10
 		default_morale = 0.3
-		manpower = 500
+		manpower = 1200
 		training_time = 120
 
 		#Misc Abilities
@@ -42,7 +42,7 @@ sub_units = {
 		}
 
 		need = {
-			support_equipment = 80
+			support_equipment = 100
 		}
 
 		same_support_type = logistics
@@ -70,7 +70,7 @@ sub_units = {
 		combat_width = 0
 
 		#Size Definitions
-		max_strength = -0.9
+		max_strength = 2
 		max_organisation = 10
 		default_morale = 0.3
 		manpower = 500
@@ -99,7 +99,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 80
-			motorized_equipment = 150
+			motorized_equipment = 200
 		}
 
 		same_support_type = logistics

@@ -22,7 +22,7 @@ sub_units = {
 
 		combat_width = 4
 
-		manpower = 500
+		manpower = 600
 
 		need = {
 			artillery_equipment = 12
@@ -109,7 +109,7 @@ sub_units = {
 		training_time = 120
 		weight = 0.5
 
-		supply_consumption = 0.26
+		supply_consumption = 0.24
 
 		forest = {
 			attack = -0.2
@@ -184,7 +184,7 @@ sub_units = {
 
 		need = {
 			artillery_equipment = 12
-			motorized_equipment = 12
+			motorized_equipment = 84
 		}
 
 		maximum_speed = -0.2
@@ -265,7 +265,7 @@ sub_units = {
 
 		need = {
 			heavy_artillery_equipment = 12
-			motorized_equipment = 12
+			motorized_equipment = 84
 		}
 
 		own_equipment_fuel_consumption_mult = 2.0

@@ -35,7 +35,7 @@ sub_units = {
 		max_strength = 0.2
 		max_organisation = 0
 		default_morale = 0.1
-		manpower = 300
+		manpower = 200
 		weight = 0.1
 
         supply_consumption = 0.12
@@ -80,10 +80,10 @@ sub_units = {
 		}
 
 		#Size Definitions
-		max_strength = -0.98
+		max_strength = 0.2
 		max_organisation = 0
 		default_morale = 0.1
-		manpower = 300
+		manpower = 500
 		weight = 0.2
 
         supply_consumption = 0.24
@@ -125,7 +125,8 @@ sub_units = {
 			mechanized_aa_equipment = 12
 		}
 
-		manpower = 300
+		manpower = 150
+		max_strength = 0.2
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 150

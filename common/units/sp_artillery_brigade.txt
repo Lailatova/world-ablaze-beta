@@ -25,6 +25,7 @@ sub_units = {
 
 		need = {
 			light_tank_artillery_chassis = 25
+			motorized_equipment = 50
 		}
 		manpower = 500
 		max_organisation = 0
@@ -99,6 +100,7 @@ sub_units = {
 
 		need = {
 			medium_tank_artillery_chassis = 25
+			motorized_equipment = 50
 		}
 		manpower = 500
 		max_organisation = 0
@@ -174,6 +176,7 @@ sub_units = {
 
 		need = {
 			heavy_tank_artillery_chassis = 25
+			motorized_equipment = 50
 		}
 		manpower = 500
 		max_organisation = 0
@@ -252,6 +255,7 @@ sub_units = {
 
 		need = {
 			modern_tank_artillery_chassis = 25
+			motorized_equipment = 50
 		}
 		manpower = 500
 		max_organisation = 0
@@ -413,6 +417,7 @@ sub_units = {
 
 		need = {
 			light_tank_artillery_chassis = 12
+			motorized_equipment = 24
 		}
 		manpower = 300
 		max_organisation = 0
@@ -462,6 +467,7 @@ sub_units = {
 
 		need = {
 			medium_tank_artillery_chassis = 12
+			motorized_equipment = 24
 		}
 		manpower = 300
 		max_organisation = 0
@@ -513,6 +519,7 @@ sub_units = {
 
 		need = {
 			heavy_tank_artillery_chassis = 12
+			motorized_equipment = 24
 		}
 		manpower = 300
 		max_organisation = 0
@@ -562,6 +569,7 @@ sub_units = {
 
 		need = {
 			modern_tank_artillery_chassis = 12
+			motorized_equipment = 24
 		}
 		manpower = 300
 		max_organisation = 0

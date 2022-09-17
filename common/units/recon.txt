@@ -23,10 +23,10 @@ sub_units = {
 		combat_width = 0
 
 		#Size Definitions
-		max_strength = -0.8
+		max_strength = 0
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 500
+		manpower = 600
 		training_time = 120
 
 		#Misc Abilities
@@ -51,7 +51,7 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 30
+			infantry_equipment = 60
 			support_equipment = 40
 		}
 
@@ -109,8 +109,9 @@ sub_units = {
 
 		#Size Definitions
 		max_organisation 	= 20
+		max_strength 		= 0
 		default_morale 		= 0.3
-		manpower 			= 500
+		manpower 			= 600
 		training_time 		= 120
 
 		#Misc Abilities
@@ -134,9 +135,9 @@ sub_units = {
 
 		transport = motorized_equipment
 		need = {
-			infantry_equipment = 30
+			infantry_equipment = 60
 			support_equipment = 40
-			motorized_equipment = 15
+			motorized_equipment = 30
 		}
 
 		forest = {
@@ -192,8 +193,9 @@ sub_units = {
 
 		#Size Definitions
 		max_organisation = 20
+		max_strength = 0
 		default_morale = 0.3
-		manpower = 500
+		manpower = 450
 		training_time = 120
 
 		#Misc Abilities
@@ -215,7 +217,7 @@ sub_units = {
 		}
 
 		need = {
-			scout_car_equipment = 15
+			scout_car_equipment = 30
 			support_equipment = 40
 		}
 
@@ -273,8 +275,9 @@ sub_units = {
 
 		#Size Definitions
 		max_organisation = 20
+		max_strength = 0
 		default_morale = 0.3
-		manpower = 500
+		manpower = 450
 		training_time = 120
 
 		#Misc Abilities
@@ -296,7 +299,7 @@ sub_units = {
 		}
 
 		need = {
-			armoured_car_equipment = 15
+			armoured_car_equipment = 30
 			support_equipment = 40
 		}
 
@@ -354,8 +357,9 @@ sub_units = {
 
 		#Size Definitions
 		max_organisation = 20
+		max_strength = 0
 		default_morale = 0.3
-		manpower = 500
+		manpower = 450
 		training_time = 120
 
 		#Misc Abilities
@@ -377,7 +381,7 @@ sub_units = {
 		}
 
 		need = {
-			light_tank_chassis = 15
+			light_tank_chassis = 30
 			support_equipment = 40
 		}
 
