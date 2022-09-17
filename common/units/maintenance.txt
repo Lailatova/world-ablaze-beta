@@ -22,7 +22,7 @@ sub_units = {
 		combat_width = 0
 
 		#Size Definitions
-		max_strength = 1
+		max_strength = 0
 		max_organisation = 20
 		default_morale = 0.3
 		manpower = 150
@@ -44,6 +44,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 40
+			motorized_equipment = 5
 		}
 		same_support_type = maintenance_company # blocks adding other recon types to template
 	}
@@ -74,7 +75,7 @@ sub_units = {
 		max_strength = 0
 		max_organisation = 20
 		default_morale = 0.3
-		manpower = 300
+		manpower = 250
 		training_time = 120
 
 		#Misc Abilities
@@ -95,7 +96,7 @@ sub_units = {
 		transport = motorized_equipment
 		need = {
 			support_equipment = 50
-			motorized_equipment = 20
+			motorized_equipment = 50
 		}
 		same_support_type = maintenance_company # blocks adding other recon types to template
 	}
@@ -153,7 +154,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 50
-			motorized_equipment = 10
+			motorized_equipment = 50
 			medium_tank_chassis = 10
 		}
 		same_support_type = maintenance_company # blocks adding other recon types to template
@@ -212,7 +213,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 50
-			motorized_equipment = 10
+			motorized_equipment = 50
 			modern_tank_chassis = 10
 		}
 		same_support_type = maintenance_company # blocks adding other recon types to templates

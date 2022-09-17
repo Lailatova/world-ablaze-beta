@@ -25,7 +25,7 @@ sub_units = {
 		need = {
 			light_tank_aa_chassis = 24
 		}
-		manpower = 300
+		manpower = 200
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180
@@ -111,7 +111,7 @@ sub_units = {
 		need = {
 			medium_tank_aa_chassis = 24
 		}
-		manpower = 300
+		manpower = 200
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180
@@ -197,7 +197,7 @@ sub_units = {
 		need = {
 			heavy_tank_aa_chassis = 24
 		}
-		manpower = 300
+		manpower = 200
 		max_organisation = 0
 		default_morale = 0.1
 		weight = 1.5
@@ -284,7 +284,7 @@ sub_units = {
 		need = {
 			modern_tank_aa_chassis = 24
 		}
-		manpower = 300
+		manpower = 200
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180
@@ -372,7 +372,7 @@ sub_units = {
 		need = {
 			light_tank_aa_chassis = 12
 		}
-		manpower = 200
+		manpower = 100
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180
@@ -420,7 +420,7 @@ sub_units = {
 		need = {
 			medium_tank_aa_chassis = 12
 		}
-		manpower = 200
+		manpower = 100
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180
@@ -468,7 +468,7 @@ sub_units = {
 		need = {
 			heavy_tank_aa_chassis = 12
 		}
-		manpower = 200
+		manpower = 100
 		max_organisation = 0
 		default_morale = 0.1
 		weight = 0.1
@@ -514,7 +514,7 @@ sub_units = {
 		need = {
 			modern_tank_aa_chassis = 12
 		}
-		manpower = 200
+		manpower = 100
 		max_organisation = 0
 		default_morale = 0.1
 		training_time = 180

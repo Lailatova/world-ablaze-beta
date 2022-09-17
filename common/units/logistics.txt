@@ -73,7 +73,7 @@ sub_units = {
 		max_strength = 2
 		max_organisation = 10
 		default_morale = 0.3
-		manpower = 500
+		manpower = 600
 		training_time = 120
 
 		#Misc Abilities
@@ -99,7 +99,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 80
-			motorized_equipment = 200
+			motorized_equipment = 250
 		}
 
 		same_support_type = logistics

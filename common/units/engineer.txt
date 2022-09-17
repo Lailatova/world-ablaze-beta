@@ -47,7 +47,7 @@ sub_units = {
 		}
 
 		need = {
-			infantry_equipment = 42
+			infantry_equipment = 50
 			support_equipment = 120
 		}
 
@@ -123,7 +123,7 @@ sub_units = {
         combat_width = 0
 
         #Size Definitions
-		max_strength = 2
+		max_strength = 1
         max_organisation = 20
         default_morale = 0.3
         manpower = 800
@@ -147,9 +147,9 @@ sub_units = {
         }
 
         need = {
-            infantry_equipment = 42
+            infantry_equipment = 80
 			support_equipment = 200
-			motorized_equipment = 30
+			motorized_equipment = 80
         }
 
         can_be_parachuted = yes
@@ -235,7 +235,7 @@ sub_units = {
         combat_width = 0
 
         #Size Definitions
-		max_strength = 3
+		max_strength = 2
         max_organisation = 20
         default_morale = 0.3
         manpower = 800
@@ -349,7 +349,7 @@ sub_units = {
         combat_width = 0
 
         #Size Definitions
-		max_strength = 3
+		max_strength = 2
         max_organisation = 20
         default_morale = 0.3
         manpower = 800

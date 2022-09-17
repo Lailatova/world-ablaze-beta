@@ -108,7 +108,7 @@ sub_units = {
 
 		need = {
 			anti_tank_equipment = 36
-			motorized_equipment = 36
+			motorized_equipment = 72
 		}
 
 		maximum_speed = -0.2
@@ -189,7 +189,7 @@ sub_units = {
 
 		need = {
 			heavy_anti_tank_equipment = 36
-			motorized_equipment = 36
+			motorized_equipment = 72
 		}
 
 		own_equipment_fuel_consumption_mult = 2.0
@@ -260,7 +260,7 @@ sub_units = {
 
 		max_organisation = 0
 		default_morale = 0
-		manpower = 400
+		manpower = 250
 		training_time = 140
 		weight = 0.5
 
