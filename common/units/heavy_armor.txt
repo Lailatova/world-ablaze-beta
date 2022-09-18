@@ -24,16 +24,16 @@ sub_units = {
 		combat_width = 3
 
 		need = {
-			heavy_tank_chassis = 50
+			heavy_tank_chassis = 25
 		}
 
-		manpower = 500
+		manpower = 250
 		max_organisation = 1
 		default_morale = 0.1
 		training_time = 180
 		weight = 1.5
 
-		supply_consumption = 0.92
+		supply_consumption = 0.46
 
 		forest = {
 		    attack = -0.15
