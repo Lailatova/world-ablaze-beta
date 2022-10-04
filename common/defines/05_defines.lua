@@ -54,7 +54,6 @@ NDefines.NCharacter.OFFICER_CORP_ADVISOR_ENTRIES_IN_MENU = { "high_command", "th
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Country
 
 
-NDefines.NCountry.GIE_CAPITULATION_WARSCORE_LEGITIMACY_FACTOR = 4.0 				--Multiplies accumulated warscore with this factor for part of starting legitimacy.
 
 NDefines.NCountry.SUPPLY_FROM_DAMAGED_INFRA = 0.01              					-- damaged infrastructure counts as this in supply calcs
 NDefines.NCountry.SUPPLY_PATH_MAX_DISTANCE = 15		    							-- When supply route reach more than X nodes the manpower+equipment delivery speed reach 100% penalty.
@@ -81,8 +80,11 @@ NDefines.NCountry.MAJOR_MIN_FACTORIES = 70											-- need at least these many
 NDefines.NCountry.BASE_FUEL_GAIN_PER_OIL = 1.1										-- base amount of fuel gained hourly per excess oil
 NDefines.NCountry.STARTING_FUEL_RATIO = 0.8											-- starting fuel ratio compared to max fuel for countries
 
+NDefines.NCountry.GIE_CAPITULATION_WARSCORE_LEGITIMACY_FACTOR = 4.0 				--Multiplies accumulated warscore with this factor for part of starting legitimacy.
 NDefines.NCountry.GIE_EXILE_AIR_START_EXPERIENCE = 300	 							--Starting experience for exile airwings
-NDefines.NCountry.GIE_ESCAPING_DIVISIONS_XP_BOOST = 0.6
+NDefines.NCountry.GIE_ESCAPING_DIVISIONS_XP_BOOST = 50.0
+NDefines.NCountry.GIE_ESCAPING_DIVISIONS_EQUIPMENT_RATIO = 0.8 						-- Base equipment ratio on escaped troops.
+NDefines.NCountry.GIE_ESCAPING_DIVISIONS_AMOUNT_RATIO = 0.005 						-- Ratio on amount of divisions that escapes. Scales with starting legitimacy
 
 NDefines.NCountry.VICTORY_POINTS_IMPORTANCE_FACTOR = 50.0							-- State victory points importance factor for AI and calculations
 NDefines.NCountry.ATTACHE_XP_SHARE = 0.15											-- Country received xp from attaches
@@ -214,11 +216,10 @@ NDefines.NTechnology.LICENSE_PRODUCTION_TECH_BONUS = 0								-- License product
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- Military
 
-NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = 0    						-- attack combat penalty for attacker if out of supply
-NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_DEFEND = 0     						-- defend combat penalty for attacker if out of supply
-
-NDefines.NMilitary.COMBAT_SUPPLY_LACK_DEFENDER_ATTACK = 0     						-- attack combat penalty for defender if out of supply
-NDefines.NMilitary.COMBAT_SUPPLY_LACK_DEFENDER_DEFEND = 0     						-- defend combat penalty for defender if out of supply
+NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_ATTACK = -0.20    						-- attack combat penalty for attacker if out of supply
+NDefines.NMilitary.COMBAT_SUPPLY_LACK_ATTACKER_DEFEND = -0.40     						-- defend combat penalty for attacker if out of supply
+NDefines.NMilitary.COMBAT_SUPPLY_LACK_DEFENDER_ATTACK = -0.40     						-- attack combat penalty for defender if out of supply
+NDefines.NMilitary.COMBAT_SUPPLY_LACK_DEFENDER_DEFEND = -0.20     						-- defend combat penalty for defender if out of supply
 
 NDefines.NMilitary.BASE_COMBAT_WIDTH = 90											-- base combat width
 NDefines.NMilitary.ADDITIONAL_COMBAT_WIDTH = 30										-- more opened up by support attack
@@ -272,6 +273,23 @@ NDefines.NMilitary.ARMOR_VS_AVERAGE = 0.3			                				-- how to weight
 NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_DEFLECTION_FACTOR = 0.5					-- damage reduction if armor outclassing enemy
 NDefines.NMilitary.LAND_COMBAT_ORG_ARMOR_DEFLECTION_FACTOR = 0.5					-- damage reduction if armor outclassing enemy
 
+NDefines.NMilitary.PIERCING_THRESHOLDS = {					-- Our piercing / their armor must be this value to deal damage fraction equal to the index in the array below [higher number = higher penetration]. If armor is 0, 1.00 will be returned.
+	1.25,
+	1.1,
+	1.0,
+	0.9,
+	0.75,
+	0.00, --there isn't much point setting this higher than 0
+}
+NDefines.NMilitary.PIERCING_THRESHOLD_DAMAGE_VALUES = {	-- 0 armor will always receive maximum damage (so add overmatching at your own peril). the system expects at least 2 values, with no upper limit.
+	1.00,
+	0.90,
+	0.80,
+	0.70,
+	0.60,
+	0.50,
+}
+
 NDefines.NMilitary.LAND_EQUIPMENT_BASE_COST = 4										-- Cost in XP to upgrade a piece of equipment one level is base + ( total levels * ramp )
 NDefines.NMilitary.LAND_EQUIPMENT_RAMP_COST = 2
 NDefines.NMilitary.NAVAL_EQUIPMENT_BASE_COST = 4
@@ -303,11 +321,13 @@ NDefines.NMilitary.SLOWEST_SPEED = 0.01
 NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.7									-- Minimum damage from nukes as a percentage of current strength/organisation
 NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 0.95									-- Minimum damage from nukes as a percentage of current strength/organisation
 
+NDefines.NMilitary.USE_MULTIPLICATIVE_ORG_LOSS_WHEN_MOVING = false
 NDefines.NMilitary.HOURLY_ORG_MOVEMENT_IMPACT = -0.5								-- how much org is lost every hour while moving an army.
 NDefines.NMilitary.ORG_LOSS_FACTOR_ON_CONQUER = 0.25              					-- percentage of (max) org loss on takign enemy province
 
 NDefines.NMilitary.LEND_LEASE_FIELD_EXPERIENCE_SCALE = 0.000						-- Experience scale for lend leased equipment used in combat.
-NDefines.NMilitary.SUPPLY_GRACE = 168												-- troops always carry 10 days of food and supply
+NDefines.NMilitary.SUPPLY_GRACE = 168												-- troops always carry 10 days of food and supply (HARDCODED, DO NOT CHANGE)
+NDefines.NMilitary.SUPPLY_GRACE_MAX_REDUCE_PER_HOUR = 1         					-- supply grace is not decreased instantly when it is buffed temporarily and buff is removed
 
 NDefines.NMilitary.ATTRITION_EQUIPMENT_LOSS_CHANCE = 0.03							-- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
 NDefines.NMilitary.ATTRITION_EQUIPMENT_PER_TYPE_LOSS_CHANCE = 0.1 					-- Chance for loosing equipment when suffer attrition. Scaled up the stronger attrition is. Then scaled down by equipment reliability.
@@ -329,7 +349,7 @@ NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY = -0.25								-- small river cr
 NDefines.NMilitary.RIVER_CROSSING_SPEED_PENALTY_LARGE = -0.5						-- large river crossing
 
 NDefines.NMilitary.RETREAT_SPEED_FACTOR = 1.5              						    -- speed bonus when retreating
-NDefines.NMilitary.BASE_FORT_PENALTY = -0.15						 				-- fort penalty
+NDefines.NMilitary.BASE_FORT_PENALTY = -0.17						 				-- fort penalty
 
 NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_IMPACT = -0.4      						-- effect on defense due to enemy air superiorty
 --NDefines.NMilitary.ENEMY_AIR_SUPERIORITY_SPEED_IMPACT = -0.5				   		-- effect on speed due to enemy air superiority
@@ -353,6 +373,8 @@ NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.025    					-- air gl
 
 
 NDefines.NAir.LEND_LEASED_EQUIPMENT_EXPERIENCE_GAIN = 0.0							-- Value used for equipment
+
+--NDefines.NAir.AIR_WING_XP_LEVELS = { 36, 72, 108, 144, 180, 216, 252, 288, 324, 360, 396, 432, 468, 504, 540, 576, 612, 648, 684, 720, 756, 792, 828, 864, 900 }		--Experience needed to progress to the next level
 
 NDefines.NAir.CAPACITY_PENALTY = 2													-- scales penalty of having overcrowded bases.
 NDefines.NAir.AIR_WING_MAX_SIZE = 200 												-- Max amount of airplanes in wing
@@ -380,10 +402,10 @@ NDefines.NAir.ACCIDENT_CHANCE_BASE = 0.25											-- Base chance % (0 - 100) f
 
 --NDefines.NAir.EFFICIENCY_REGION_CHANGE_DAILY_GAIN_DEFAULT = 0.1						-- Default how much efficiency to regain per day. Gain applied hourly.
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRUCK_DAMAGE_FACTOR = 0.02
-NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_FACTOR = 0.003
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_FACTOR = 0.008
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_TRAIN_DAMAGE_DISRUPTION_MITIGATION = 3.0 	-- Multiply Train Damage by (Smooth / (Smooth + (Disruption * Mitigation)))
 NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_RAILWAY_DAMAGE_SPILL_FACTOR = 0.002 		-- Portion of train damage to additionally deal to railways
-NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_INFRA_DAMAGE_SPILL_FACTOR = 0.0005 			-- Portion of truck damage to additionally deal to infrastructure
+NDefines.NAir.AIR_WING_ATTACK_LOGISTICS_INFRA_DAMAGE_SPILL_FACTOR = 0.0 			-- Portion of truck damage to additionally deal to infrastructure
 
 NDefines.NAir.CAS_NIGHT_ATTACK_FACTOR = 0.1						                    -- CAS damaged get multiplied by this in land combats at night
 NDefines.NAir.ANTI_AIR_MAXIMUM_DAMAGE_REDUCTION_FACTOR = 0.50 						-- Maximum damage reduction factor applied to incoming air attacks against units with AA.
@@ -395,27 +417,30 @@ NDefines.NAir.BOMBING_STATE_BUILD_PRIO_SCALE = 2									-- Scale of the selecte
 NDefines.NAir.ANTI_AIR_PLANE_DAMAGE_FACTOR = 0.3									-- Anti Air Gun Damage factor
 
 NDefines.NAir.MISSION_COMMAND_POWER_COSTS = {  										-- command power cost per plane to create a mission
-		0.0, -- AIR_SUPERIORITY
-		0.0, -- CAS
-		0.0, -- INTERCEPTION
-		0.0, -- STRATEGIC_BOMBER
-		0.0, -- NAVAL_BOMBER
-		0.0, -- DROP_NUKE
-		0.0, -- PARADROP
-		0.0, -- NAVAL_KAMIKAZE
-        0.0, -- PORT_STRIKE
-		0.0, -- ATTACK_LOGISTICS
-		0.1, -- AIR_SUPPLY
-		0.0, -- TRAINING
-		0.0, -- NAVAL_MINES_PLANTING
-		0.0, -- NAVAL_MINES_SWEEPING
-		0.0, -- MISSION_RECON
-	}
+	0.0, -- AIR_SUPERIORITY
+	0.0, -- CAS
+	0.0, -- INTERCEPTION
+	0.0, -- STRATEGIC_BOMBER
+	0.0, -- NAVAL_BOMBER
+	0.0, -- DROP_NUKE
+	0.0, -- PARADROP
+	0.0, -- NAVAL_KAMIKAZE
+	0.0, -- PORT_STRIKE
+	0.0, -- ATTACK_LOGISTICS
+	0.1, -- AIR_SUPPLY
+	0.0, -- TRAINING
+	0.0, -- NAVAL_MINES_PLANTING
+	0.0, -- NAVAL_MINES_SWEEPING
+	0.0, -- RECON
+	0.0, -- NAVAL_PATROL
+}
 
 NDefines.NAir.NAVAL_STRIKE_CARRIER_MULTIPLIER = 10.0							    -- damage bonus when planes are in naval combat where their carrier is present (and can thus sortie faster and more effectively)
 NDefines.NAir.NAVAL_STRIKE_DAMAGE_TO_ORG = 0.5										-- Balancing value to convert damage ( naval_strike_attack * hits ) to Organisation reduction.
 
 NDefines.NAir.AIR_WING_COUNTRY_XP_FROM_TRAINING_FACTOR = 0.03						--Factor on country Air XP gained from wing training
+NDefines.NAir.INTERCEPTION_DISTANCE_SCALE = 100 										--At this many pixels of path length, full interception efficiency is applied to air missions. Lerp from 0.
+NDefines.NAir.INTERCEPTION_DAMAGE_SCALE = 1											--Multiply the interception damage with this value. Works as a cap when interception distance is at maximum.
 
 
 
@@ -586,10 +611,11 @@ NDefines.NNavy.MISSION_FUEL_COSTS = {  -- fuel cost for each mission
 
 NDefines.NSupply.NUM_RAILWAYS_TRAIN_FACTOR = 0.1									-- the train usage is scaled by railway distance between the supply node and the capital multiplied by this factor
 NDefines.NSupply.SUPPLY_HUB_FULL_MOTORIZATION_TRUCK_COST = 500
-NDefines.NSupply.LOCAL_SUPPLY_PER_AIR_MISSION = 0.2									-- each assigned plane gives this much supply at full efficiency
---NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0 							-- supply from one civilian factory
---NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0 							-- supply from one military factory
-NDefines.NSupply.AVAILABLE_MANPOWER_STATE_SUPPLY = 0								--Factor for state supply from max manpower (population)
+NDefines.NSupply.LOCAL_SUPPLY_PER_AIR_MISSION = 0.2									-- each assigned plane gives this much supply at full efficiency  #AIR_SUPPLY AIR SUPPLY
+NDefines.NSupply.CAPITAL_SUPPLY_CIVILIAN_FACTORIES = 0.3 							-- supply from one civilian factory
+NDefines.NSupply.CAPITAL_SUPPLY_MILITARY_FACTORIES = 0.6 							-- supply from one military factory
+NDefines.NSupply.AVAILABLE_MANPOWER_STATE_SUPPLY = 0.18								--Factor for state supply from max manpower (population)
+NDefines.NSupply.NON_CORE_MANPOWER_STATE_SUPPLY = 0.05						--Factor for population sttate supply when controlled by an occupier (NO TAKE FOOD)
 
 NDefines.NSupply.NAVAL_BASE_FLOW = 0.0 												-- max output/input of a naval node is limited by this base value + additional ratio for each level
 NDefines.NSupply.NAVAL_FLOW_PER_LEVEL = 5.0 										-- max output/input of a naval node is limited by previous base value + this define per its level
@@ -608,7 +634,7 @@ NDefines.NSupply.NODE_STARTING_PENALTY_PER_PROVINCE = 0.75
 
 NDefines.NSupply.RAILWAY_BASE_FLOW = 5.0											-- how much base flow railway gives when a node connected to its capital/a naval node by a railway
 NDefines.NSupply.RAILWAY_FLOW_PER_LEVEL = 10.0 										-- how much additional flow a railway level gives
-NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 10.0 							-- penalty to flow per damaged railway
+NDefines.NSupply.RAILWAY_FLOW_PENALTY_PER_DAMAGED = 8.0 							-- penalty to flow per damaged railway
 
 ---
 
@@ -622,6 +648,13 @@ NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CORE = 5
 NDefines.NSupply.RAILWAY_CONVERSION_COOLDOWN_CIVILWAR = 0
 
 NDefines.NSupply.SUPPLY_THRESHOLD_FOR_ARMY_ATTRITION = 0.4 							-- armies will only get attrition below this supply
+NDefines.NSupply.STORED_SUPPLY_CONSUMPTION_RATE_FACTOR = 1						    --Multiplies consumption rate of stored supply (more/less easement)
+
+-- armies slowly gains and buffers supply above >100% up to their supply grace if they have efficent supply flow
+-- otherwuse they will lose up to 100% supply every day depending on how bad supply flow is
+NDefines.NSupply.ARMY_SUPPLY_RATIO_STARTING_GAIN = 0.0
+NDefines.NSupply.ARMY_SUPPLY_RATIO_SPEED_GAIN_PER_HOUR = 0.01
+NDefines.NSupply.ARMY_MAX_SUPPLY_RATIO_GAIN_PER_HOUR = 0.33
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- AI
 

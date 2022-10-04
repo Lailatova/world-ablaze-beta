@@ -423,7 +423,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "theorist_entry"
-		position = {x=130 y=-4}
+		position = {x=145 y=-4}
 		size = { width=164 height=150 }
 		Orientation = upper_left
 		clipping = no
@@ -659,28 +659,6 @@ guiTypes = {
 			}
 		}
 
-	buttonType = {
-		name = "commander_roster_army"
-		quadTextureSprite = "GFX_diplo_filter_entry"
-		position = { x=421 y=76 }
-		buttonText = "Placeholder"
-		font = "hoi_16mbs"
-		frame = 2
-		pdx_tooltip = "COMMANDER_ROSTER_ARMY_TOOLTIP"
-		pdx_tooltip_delayed = "COMMANDER_ROSTER_ARMY_TOOLTIP_DELAYED"
-     }
-
-	buttonType = {
-		name = "commander_roster_navy"
-		quadTextureSprite = "GFX_diplo_filter_entry"
-		position = { x=421 y=109 }
-		buttonText = "Placeholder"
-		font = "hoi_16mbs"
-		frame = 2
-		pdx_tooltip = "COMMANDER_ROSTER_NAVY_TOOLTIP"
-		pdx_tooltip_delayed = "COMMANDER_ROSTER_NAVY_TOOLTIP_DELAYED"
-     }
-
 	containerWindowType = {
 		name = "high_command"
 		position = { x=-8 y=0 }
@@ -782,17 +760,23 @@ guiTypes = {
 				format = left
 			}
 
-			buttonType ={
-                name ="button_prefered_tactic_selection"
-                spriteType = "GFX_preferred_tactic_button"
-	            position = { x=385 y=75 }
-            }
+			containerWindowType = {
+				name = "preferred_tactic_container"
+				position = { x = 380 y = 50 }
+				size = { width = 98% height = 270 }
 
-            iconType ={
-                name ="icon_prefered_tactic_type"
-                spriteType = "GFX_attacker_damage_icon"
-	            position = { x=480 y=90 }
-            }
+				buttonType ={
+					name ="button_prefered_tactic_selection"
+					spriteType = "GFX_preferred_tactic_button"
+					position = { x=5 y=50 }
+				}
+
+				iconType ={
+					name ="icon_prefered_tactic_type"
+					spriteType = "GFX_attacker_damage_icon"
+					position = { x=390 y=80 }
+				}
+			}
 
 			containerWindowType = {
 				name = "army_chief"
@@ -830,7 +814,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "army_doctrine_button"
-				position = { x=274 y=17 }
+				position = { x=260 y=17 }
 				size = {width=20 height=20}
 				clipping = no
 
@@ -870,6 +854,29 @@ guiTypes = {
 					fixedsize = yes
 				}
 			}
+
+			buttonType = {
+				name = "commander_roster_army"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=376 y=32 }
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_ARMY_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_ARMY_TOOLTIP_DELAYED"
+			}
+
+			buttonType = {
+				name = "commander_roster_division"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=376 y=68 }
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_DIVISION_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_DIVISION_TOOLTIP_DELAYED"
+			}
+
 		}
 
 		containerWindowType = {
@@ -956,7 +963,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "navy_doctrine_button"
-				position = { x=240 y=17 }
+				position = { x=226 y=17 }
 				size = {width=20 height=20}
 				clipping = no
 
@@ -996,6 +1003,18 @@ guiTypes = {
 					fixedsize = yes
 				}
 			}
+
+			buttonType = {
+				name = "commander_roster_navy"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=376 y=82 }
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_NAVY_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_NAVY_TOOLTIP_DELAYED"
+			}
+
 		}
 
 		containerWindowType = {
@@ -1082,7 +1101,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "air_doctrine_button"
-				position = { x=274 y=17 }
+				position = { x=260 y=17 }
 				size = {width=20 height=20}
 				clipping = no
 
@@ -1328,6 +1347,29 @@ guiTypes = {
 					fixedsize = yes
 				}
 			}
+
+			buttonType = {
+				name = "commander_roster_army"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=382 y=36 }
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_ARMY_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_ARMY_TOOLTIP_DELAYED"
+			}
+
+			buttonType = {
+				name = "commander_roster_division"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=382 y=79				}
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_DIVISION_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_DIVISION_TOOLTIP_DELAYED"
+			}
+
 		}
 
 		containerWindowType = {
@@ -1454,6 +1496,18 @@ guiTypes = {
 					fixedsize = yes
 				}
 			}
+
+			buttonType = {
+				name = "commander_roster_navy"
+				quadTextureSprite = "GFX_diplo_filter_entry"
+				position = { x=396 y=476 }
+				buttonText = "Placeholder"
+				font = "hoi_16mbs"
+				frame = 2
+				pdx_tooltip = "COMMANDER_ROSTER_NAVY_TOOLTIP"
+				pdx_tooltip_delayed = "COMMANDER_ROSTER_NAVY_TOOLTIP_DELAYED"
+			}
+
 		}
 
 		containerWindowType = {
