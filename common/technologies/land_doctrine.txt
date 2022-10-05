@@ -1288,17 +1288,17 @@ technologies = {
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
 		category_tanks = {
-			max_organisation = 4
+			max_organisation = 6
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
 		category_assault = {
-			max_organisation = 4
+			max_organisation = 6
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
 		category_infantry_support = {
-			max_organisation = 4
+			max_organisation = 6
 			soft_attack = 0.1
 			hard_attack = 0.1
 		}
@@ -1505,15 +1505,15 @@ technologies = {
 		}
 		org_loss_when_moving = -0.05
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 10
 			default_morale = 0.1
 		}
 		category_assault = {
-			max_organisation = 2
-			default_morale = 0.1
+			max_organisation = 10
+			default_morale = 0.10
 		}
 		category_infantry_support = {
-			max_organisation = 2
+			max_organisation = 10
 			default_morale = 0.1
 		}
 		path = {
@@ -1568,15 +1568,15 @@ technologies = {
 		xp_unlock_cost = 50
 		#xp_research_bonus = 1
 		category_tanks = {
-			max_organisation = 4
+			max_organisation = 10
 			supply_consumption = -0.1
 		}
 		category_assault = {
-			max_organisation = 4
+			max_organisation = 10
 			supply_consumption = -0.1
 		}
 		category_infantry_support = {
-			max_organisation = 4
+			max_organisation = 10
 			supply_consumption = -0.1
 		}
 		doctrine = yes
@@ -1866,7 +1866,7 @@ technologies = {
 		org_loss_when_moving = -0.1
 		category_tanks = {
 			breakthrough = -0.1
-			max_organisation = 2
+			max_organisation = 8
 		}
 		light_armor = {
 			combat_width = -2
@@ -1918,6 +1918,15 @@ technologies = {
 		}
 		modern_assault_brigade = {
 			combat_width = -1
+		}
+		motorized_light = {
+			max_organisation = -5
+		}
+		motorized = {
+			max_organisation = -5
+		}
+		mechanized = {
+			max_organisation = -5
 		}
 		#modifier = {
 		#	unit_medium_armor_design_cost_factor = -1.0
@@ -2016,7 +2025,7 @@ technologies = {
 		xp_unlock_cost = 75
 		#xp_research_bonus = 1
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 8
 			default_morale = 0.1
 			maximum_speed = 0.05
 		}
@@ -2085,7 +2094,7 @@ technologies = {
 		#xp_research_bonus = 1
 		land_reinforce_rate = 0.08
 		category_tanks = {
-			max_organisation = 6
+			max_organisation = 10
 		}
 		enable_tactic = tactic_barrage
 		enable_tactic = tactic_unexpected_thrust
@@ -2215,7 +2224,7 @@ technologies = {
 		xp_unlock_cost = 75
 		#xp_research_bonus = 1
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 4
 			breakthrough = 0.2
 		}
 		doctrine = yes
@@ -2508,7 +2517,7 @@ technologies = {
 		xp_unlock_cost = 100
 		#xp_research_bonus = 1
 		category_tanks = {
-			max_organisation = 1
+			max_organisation = 4
 			breakthrough = 0.1
 		}
 		enable_tactic = tactic_overwhelming_fire
@@ -2565,7 +2574,7 @@ technologies = {
 			war_of_annihilation
 		}
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 4
 			breakthrough = 0.05
 			maximum_speed = 0.05
 			default_morale = 0.08
@@ -2649,7 +2658,7 @@ technologies = {
 			war_of_annihilation
 		}
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 4
 			breakthrough = 0.05
 			hard_attack = 0.05
 			defense = 0.05
@@ -2701,7 +2710,7 @@ technologies = {
 		supply_consumption_factor = -0.05
 		land_reinforce_rate = 0.02
 		category_tanks = {
-			max_organisation = 2
+			max_organisation = 4
 			soft_attack = 0.05
 			hard_attack = 0.05
 			default_morale = -0.05
