@@ -3620,7 +3620,7 @@ technologies = {
 		xor = {
 			shock_and_awe
 		}
-		max_planning = 0.1
+		max_planning = 0.05
 		planning_speed = 0.1
 		category_all_infantry = {
 			breakthrough = 0.05
