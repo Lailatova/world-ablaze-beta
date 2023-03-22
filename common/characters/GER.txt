@@ -167,6 +167,30 @@ characters= {
 		}
 	}
 
+	GER_hermann_fegelein = {
+		name = GER_hermann_fegelein
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_Germany_Hermann_Fegelein.dds"
+				small = "gfx/interface/ideas/idea_GER_hermann_fegelein.dds"
+			}
+		}
+		corps_commander = {
+			traits = { SS_officer_trait trait_reckless cavalry_leader politically_connected corps_commander_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+			visible = {
+				OR = { 
+					has_country_flag = SS_high_command_not_ai
+					has_country_flag = SS_high_command_ai
+				}
+			}
+		}
+	}
+
 	GER_walter_von_reichenau = {
 		name = GER_walter_von_reichenau
 		portraits = {

@@ -310,6 +310,7 @@ recruit_character = GER_otto_ciliax
 recruit_character = GER_paul_hausser
 recruit_character = GER_ritter_von_greim
 recruit_character = GER_sepp_dietrich
+recruit_character = GER_hermann_fegelein
 recruit_character = GER_viktor_schutze
 recruit_character = GER_von_braun
 recruit_character = GER_walter_kruger
