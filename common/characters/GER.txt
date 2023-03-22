@@ -191,6 +191,31 @@ characters= {
 		}
 	}
 	
+	GER_wilhelm_mohnke = {
+		name = GER_wilhelm_mohnke
+		portraits = {
+			army = {
+				large = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Mohnke.dds"
+				small = "gfx/interface/ideas/idea_GER_wilhelm_mohnke.dds"
+			}
+		}
+		corps_commander = {
+			traits = { SS_officer_trait trait_reckless politically_connected corps_commander_trait armor_officer }
+			skill = 1
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			visible = {
+				date > 1945.2.27
+				OR = { 
+					has_country_flag = SS_high_command_not_ai
+					has_country_flag = SS_high_command_ai
+				}
+			}
+		}
+	}
+	
 	GER_wilhelm_burgdorf = {
 		name = GER_wilhelm_burgdorf
 		portraits = {
@@ -861,8 +886,8 @@ characters= {
 		}
 	}
 
-	GER_sepp_dietrich= {
-		name =GER_sepp_dietrich
+	GER_sepp_dietrich = {
+		name = GER_sepp_dietrich
 		portraits = {
 			army = {
 				large = "gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"

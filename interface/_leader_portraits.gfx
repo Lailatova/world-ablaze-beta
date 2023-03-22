@@ -4597,6 +4597,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = GFX_portrait_GER_wilhelm_mohnke
+		texturefile = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Mohnke.dds"
+	}
+
+	spriteType = {
 		name = GFX_portrait_GER_hermann_fegelein
 		texturefile = "gfx/leaders/GER/Portrait_Germany_Hermann_Fegelein.dds"
 	}
@@ -4609,6 +4614,11 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_portrait_GER_sepp_dietrich_small
 		texturefile = "gfx/interface/ideas/idea_GER_josef_dietrich.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_GER_wilhelm_mohnke_small
+		texturefile = "gfx/interface/ideas/idea_GER_wilhelm_mohnke.dds"
 	}
 
 	spriteType = {
@@ -7509,6 +7519,11 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_portrait_Sepp_Dietrich
 		texturefile = gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds
+	}
+
+	spriteType = {
+		name = GFX_portrait_Wilhelm_Mohnke
+		texturefile = gfx/leaders/GER/Portrait_Germany_Wilhelm_Mohnke.dds
 	}
 
 	spriteType = {
