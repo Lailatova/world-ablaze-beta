@@ -4602,8 +4602,18 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = GFX_portrait_GER_wilhelm_burgdorf
+		texturefile = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Burgdorf.dds"
+	}
+
+	spriteType = {
 		name = GFX_portrait_GER_sepp_dietrich_small
 		texturefile = "gfx/interface/ideas/idea_GER_josef_dietrich.dds"
+	}
+
+	spriteType = {
+		name = GFX_portrait_GER_wilhelm_burgdorf_small
+		texturefile = "gfx/interface/ideas/idea_GER_wilhelm_burgdorf.dds"
 	}
 
 	spriteType = {
@@ -7499,6 +7509,11 @@ spriteTypes = {
 	spriteType = {
 		name = GFX_portrait_Sepp_Dietrich
 		texturefile = gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds
+	}
+
+	spriteType = {
+		name = GFX_portrait_Wilhelm_Burgdorf
+		texturefile = gfx/leaders/GER/Portrait_Germany_Wilhelm_Burgdorf.dds
 	}
 
 	spriteType = {
