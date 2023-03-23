@@ -47,6 +47,9 @@ characters= {
 			traits = {
 				prince_of_terror
 			}
+			ai_will_do = {
+				factor = 0
+			}
 		}
 	}
 	AUS_alfred_klahr = {
@@ -71,12 +74,12 @@ characters= {
 			}
 		}
 		corps_commander = {
-			traits = { trickster trait_mountaineer }
-			skill = 3
-			attack_skill = 2
-			defense_skill = 3
-			planning_skill = 3
-			logistics_skill = 2
+			traits = { trickster trait_mountaineer corps_commander_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
 			legacy_id = -1
 		}
 	}
@@ -293,12 +296,12 @@ characters= {
 			}
 		}
 		corps_commander = {
-			traits = { trait_engineer infantry_leader }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
+			traits = { trait_engineer infantry_officer career_officer politically_connected corps_commander_trait }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 3
+			logistics_skill = 1
 			legacy_id = -1
 		}
 		name =AUS_lothar_rendulic
@@ -369,12 +372,12 @@ characters= {
 			}
 		}
 		corps_commander = {
-			traits = { trait_mountaineer harsh_leader }
-			skill = 2
-			attack_skill = 2
-			defense_skill = 2
+			traits = { trait_mountaineer harsh_leader corps_commander_trait career_officer }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
 			planning_skill = 1
-			logistics_skill = 2
+			logistics_skill = 1
 			legacy_id = -1
 		}
 		name =AUS_franz_bohme
@@ -449,6 +452,9 @@ characters= {
 			}
 			traits = {
 				popular_figurehead
+			}
+			ai_will_do = {
+				factor = 0
 			}
 		}
 		name =AUS_leopold_figl
