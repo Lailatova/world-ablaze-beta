@@ -286,7 +286,7 @@ NDefines.NMilitary.ARMY_STRATEGIC_DEPLOYMENT_FUEL_MULT = 0.0						-- fuel consum
 NDefines.NMilitary.STRATEGIC_SPEED_INFRA_BASE = 3.0
 NDefines.NMilitary.STRATEGIC_SPEED_INFRA_MAX = 5.0
 NDefines.NMilitary.STRATEGIC_SPEED_RAIL_BASE = 15.0
-NDefines.NMilitary.STRATEGIC_SPEED_RAIL_MAX = 25.0
+NDefines.NMilitary.STRATEGIC_SPEED_RAIL_MAX = 20.0
 --NDefines.NMilitary.PLAN_EXECUTE_CAREFUL_LIMIT = 10								-- When looking for an attach target, this score limit is required in the battle plan to consider province for attack
 --NDefines.NMilitary.PLAN_EXECUTE_CAREFUL_MAX_FORT = 9								-- If execution mode is set to careful, units will not attack provinces with fort levels greater than or equal to this
 
