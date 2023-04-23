@@ -24,6 +24,9 @@ characters= {
 			available = {
 				has_government = fascism
 				has_completed_focus = GER_assume_direct_control
+				NOT = {
+					has_completed_focus = GER_depose_hitler
+				}
 			}
 			traits = {
 				fuhrer

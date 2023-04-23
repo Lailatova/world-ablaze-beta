@@ -8079,6 +8079,198 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = GER_depose_hitler
+		icon = GFX_goal_GER_depose_hitler
+		prerequisite = { focus = GER_endsieg }
+		x = 0
+		y = 1
+		relative_position_id = GER_endsieg
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Adolf Hitler" }
+		}
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				kill_country_leader = yes
+			}
+			create_country_leader = {
+				name = "Provisional Government"
+				desc = "POLITICS_PROVISIONAL_GOVERNMENT_DESC"
+				picture = "gfx/leaders/GER/Portrait_Provisional_Government.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_appoint_speer
+		icon = GFX_goal_GER_appoint_speer
+		prerequisite = { focus = GER_depose_hitler }
+		x = 2
+		y = 1
+		relative_position_id = GER_depose_hitler
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Provisional Government" }
+		}
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = appoint_speer_tt
+			hidden_effect = {
+				kill_country_leader = yes
+				set_variable = { var = GER_Industrialists_attitude value = 2 }
+				set_variable = { var = GER_Industrialists_influence value = 6 }
+				set_variable = { var = GER_SS_influence value = 10 }
+				set_variable = { var = GER_SS_attitude value = 10 }
+				set_variable = { var = GER_Industrialists_research_speed value = 5 }
+
+				add_dynamic_modifier = { modifier = GER_reorganization_of_industry_dynamic_modifier }
+
+				set_variable = { GER_reorganization_of_industry_consumer_goods_factor = 0 }
+				set_variable = { GER_reorganization_of_industry_war_support_weekly = 0 }
+				set_variable = { GER_reorganization_of_industry_resistance_target = 0 }
+				set_variable = { GER_reorganization_of_industry_repair_factor = 0 }
+				set_variable = { GER_reorganization_of_industry_industrial_capacity_factory = 0 }
+				set_variable = { GER_reorganization_of_industry_industry_air_damage_factor = 0 }
+				set_variable = { GER_reorganization_of_industry_production_lack_of_resource_penalty_factor = 0 }
+				set_variable = { GER_reorganization_of_industry_fuel_gain_factor_from_states = 0 }
+				set_variable = { GER_reorganization_of_industry_political_power_factor = -0.5 }
+				set_variable = { GER_reorganization_of_industry_local_resources_factor = 0 }
+				set_variable = { GER_reorganization_of_industry_research_speed_factor = 0 }
+
+			}
+			create_country_leader = {
+				name = "Albert Speer"
+				desc = "POLITICS_HERMANN_SPEER_DESC"
+				picture = "gfx/leaders/GER/Portrait_Germany_Albert_Speer.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = {
+					quartermaster
+					armaments_genius
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_appoint_goring
+		icon = GFX_goal_GER_appoint_goring
+		prerequisite = { focus = GER_depose_hitler }
+		x = 4
+		y = 1
+		relative_position_id = GER_depose_hitler
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Provisional Government" }
+		}
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_timed_idea = { idea = second_four_year_plan  days = 1460 }
+			hidden_effect = {
+				kill_country_leader = yes
+			}
+			create_country_leader = {
+				name = "Hermann Göring"
+				desc = "POLITICS_HERMANN_GORING_DESC"
+				picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Goring.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { corrupt_kleptocrat industry_vampire }
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_appoint_gobbels
+		icon = GFX_goal_GER_appoint_gobbels
+		prerequisite = { focus = GER_depose_hitler }
+		x = -2
+		y = 1
+		relative_position_id = GER_depose_hitler
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Provisional Government" }
+		}
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				kill_country_leader = yes
+			}
+			remove_ideas = { joseph_goebbels }
+			create_country_leader = {
+				name = "Joseph Göbbels"
+				desc = "POLITICS_JOSEPH_GÖBBELS_DESC"
+				picture = "gfx/leaders/GER/Portrait_Germany_Joseph.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { fascist_demagogue propaganda_expert
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = GER_appoint_bormann
+		icon = GFX_goal_GER_appoint_bormann
+		prerequisite = { focus = GER_depose_hitler }
+		x = -4
+		y = 1
+		relative_position_id = GER_depose_hitler
+
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes name = "Provisional Government" }
+		}
+
+		cost = 3
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			kill_country_leader = yes
+			create_country_leader = {
+				name = "Martin Ludwig Bormann"
+				desc = "POLITICS_MARTIN_BORMANN2_DESC"
+				picture = "gfx/leaders/GER/Portrait_Germany_Bormann.dds"
+				expire = "1965.1.1"
+				ideology = nazism
+				traits = { sinister_secretary
+				}
+			}
+		}
+	}
 
 	########### AXIS BRANCH ###############
 

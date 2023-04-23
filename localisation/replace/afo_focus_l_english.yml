@@ -5827,6 +5827,21 @@
   GER_endsieg_tt:0 "Has control over all §YMajor Soviet cities§! in the West and is at peace with the §YSoviet Union§!"
   GER_endsieg_effect_tt:0 "§YWill Germanize names of occupied states, towns and cities§!"
 
+  GER_depose_hitler:0 "The Führers Retirement"
+  GER_depose_hitler_desc:0 "The Führer has plans to retire and settle down in Linz, the Austrian town where he spent his youth years. There are grandiose plans for the architectural reshaping of the city which are to be completed by 1950"
+
+  GER_appoint_speer:0 "Albert Speer"
+  GER_appoint_speer_desc:0 ""
+  
+  GER_appoint_goring:0 "Hermann Göring"
+  GER_appoint_goring_desc:0 ""
+
+  GER_appoint_gobbels:0 "Joseph Göbbels"
+  GER_appoint_gobbels_desc:0 ""
+
+  GER_appoint_bormann:0 "Martin Bormann"
+  GER_appoint_bormann_desc:0 ""
+
   GER_downfall_of_the_solf_kreis:0 "Downfall of the Solf-Kreis"
   GER_downfall_of_the_solf_kreis_desc:0 "Reichsführer Heinrich Himmler has brought forth a rather shocking discovery of a group of conspirators! Thanks to a mole the SS has managed to bring these traitors to justice, and has subsequently proven its use regarding the security of the Reich. If we are to further improve security we should allow the SS and SD more freedom in stamping out any resistance and traitors who may aid our enemies."
   GER_downfall_of_the_solf_kreis_tt:0 "The £faction_ger_ss SS are §CLoyal§! and have at §OTotal Influence§!\n"
