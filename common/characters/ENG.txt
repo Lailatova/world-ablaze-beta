@@ -2518,7 +2518,7 @@ characters= {
 			ai_will_do = {
 				base = 0
 				modifier = {
-					add = 1
+					add = 4000
 					date > 1943.1.1
 				}
 			}

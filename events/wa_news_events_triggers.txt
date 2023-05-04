@@ -74,6 +74,7 @@ country_event = {
 
 	immediate = {
 		news_event = { id = afo_news.2 }
+		set_global_flag = axis_victory_in_africa
 	}
 
 	option = {}

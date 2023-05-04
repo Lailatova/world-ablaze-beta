@@ -2626,6 +2626,12 @@ rom_hun_border_conflict_won:0 "Experience from the border clash in Korea:"
    GER_ask_for_peace_USA:0 "Peace with the Allies"
    GER_ask_for_peace_USA_TT:0 "Controller of the following territory must be either Germany or a member of the Axis: Ireland, Home Islands of the United Kingdom, Gibraltar, all Mediterranean islands, North Africa including the Suez Canal and the Faroe Islands. In Addition Peace with the Soviets must have been achieved."
 
+   GER_ask_for_peace_UK:0 "Peace with the UK"
+   GER_ask_for_peace_UK_tt:0 "Controller of the following territory must be either Germany or a member of the Axis: Suez Canal, Malta, Cyprus and Gibraltar, in addition all of mainland Europe must be secured, we can not be at war with either the Soviets or the United states."
+   GER_ask_for_peace_UK_desc:0 "§GIf the UK accepts we will sign a white peace with the Allies.§! \n§RWe will lose control over North african oil and the british colonies.§! \n"
+   
+   GER_ask_for_peace_UK_timer:0 "Window of opportunity"
+
    GER_ask_for_peace_SOV:0 "Peace with the Soviets"
    GER_ask_for_peace_SOV_TT:0 "Must control all Soviet territory west of the Urals."
 

@@ -5974,14 +5974,26 @@ GER_reichskommissariats = {
 			release = RBE
 			RBE = {
 				hidden_effect = {
+					if = {
+						limit = {
+							NOT = {
+								29 = { is_controlled_by = VIC }
+							}
+						}
+						set_state_controller = 29
+						add_state_claim = 29
+						transfer_state = 29
+					}
 					transfer_state = 6
+					transfer_state = 34
+					transfer_state = 979
+					transfer_state = 985
+					set_state_controller = 6
 					set_state_controller = 34
-					set_state_controller = 29
 					set_state_controller = 979
 					set_state_controller = 985
 					add_state_claim = 6
 					add_state_claim = 34
-					add_state_claim = 29
 					add_state_claim = 979
 					add_state_claim = 985
 					set_cosmetic_tag = RBE_reichskommissariat
@@ -23208,6 +23220,165 @@ foreign_politics = {
 			}
 		}
 	}
+	
+	GER_ask_for_peace_UK_timer = {
+
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			NOT = {
+				has_war_with = ENG
+			}
+		}
+
+		days_mission_timeout = 60
+		is_good = no
+		fire_only_once = yes
+		activation = {
+			NOT = {
+				has_idea = GER_barbarossa_preparation
+			}
+			has_global_flag = fall_of_france
+			has_global_flag = axis_victory_in_africa
+			ENG = {
+				has_navy_size = {
+				    size < 5
+				    type = capital_ship
+				}
+				casualties > 200000
+			}
+			GRE = {	has_capitulated = yes }
+			OR = {
+				GER = { has_full_control_of_state = 923 }
+				ITA = { has_full_control_of_state = 923 }
+				ITL = { has_full_control_of_state = 923 }
+			}
+			OR = {
+				GER = { has_full_control_of_state = 183 }
+				ITA = { has_full_control_of_state = 183 }
+			}
+			OR = {
+				GER = { has_full_control_of_state = 116 }
+				ITA = { has_full_control_of_state = 116 }
+			}
+			OR = {
+				GER = { has_full_control_of_state = 118 }
+				ITA = { has_full_control_of_state = 118 }
+			}
+			NOT = {
+				OR = {
+					has_war_with = SOV
+					has_war_with = USA
+				}
+			}
+			NOT = {
+				any_home_area_neighbor_country = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		timeout_effect = {
+			set_country_flag = time_has_passed
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	GER_ask_for_peace_UK = {
+		allowed = {
+			original_tag = GER
+		}
+		available = {
+			NOT = {
+				has_country_flag = time_has_passed
+			}
+			NOT = {
+				has_idea = GER_barbarossa_preparation
+			}
+			has_global_flag = fall_of_france
+			has_global_flag = axis_victory_in_africa
+			ENG = {
+				has_navy_size = {
+				    size < 5
+				    type = capital_ship
+				}
+				casualties > 200000
+			}
+			GRE = {	has_capitulated = yes }
+			custom_trigger_tooltip = {
+				tooltip = GER_ask_for_peace_UK_tt
+				OR = {
+					GER = { has_full_control_of_state = 923 }
+					ITA = { has_full_control_of_state = 923 }
+					ITL = { has_full_control_of_state = 923 }
+				}
+				OR = {
+					GER = { has_full_control_of_state = 183 }
+					ITA = { has_full_control_of_state = 183 }
+				}
+				OR = {
+					GER = { has_full_control_of_state = 116 }
+					ITA = { has_full_control_of_state = 116 }
+				}
+				OR = {
+					GER = { has_full_control_of_state = 118 }
+					ITA = { has_full_control_of_state = 118 }
+				}
+				NOT = {
+					OR = {
+						has_war_with = SOV
+						has_war_with = USA
+					}
+				}
+				NOT = {
+					any_home_area_neighbor_country = {
+						has_war_with = ROOT
+					}
+				}
+			}
+		}
+		
+		visible = {
+			GER = {
+				exists = yes
+			}
+			has_war_with = ENG
+			ENG = {
+				has_capitulated = no
+			}
+			has_government = fascism
+			NOT = {
+				OR = {
+					has_war_with = SOV
+					has_war_with = USA
+				}
+			}
+		}
+		
+		cost = 200
+		fire_only_once = yes
+		
+		ai_will_do = {
+			factor = 0
+		}
+		
+		complete_effect = {
+			ENG = {
+				country_event = {
+					id = ger_armor.943
+					days = 1
+				}
+			}
+		}
+	}
+	
 	# Titles Deprivation Act 1917
 	request_restoration_of_british_titles = {
 		allowed = {

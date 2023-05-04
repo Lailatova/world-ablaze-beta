@@ -2903,6 +2903,59 @@ ENG_soviets_are_no_threat = {
 	}
 }
 
+ENG_german_peace = {
+	allowed = {
+		tag = ENG
+	}
+	enable = {
+		has_global_flag = axis_peace_with_uk
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = PER
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SPR
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = COG
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = SAU
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = LIB
+		value = -1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = POR
+		value = -1000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = guarantee
+		value = -2000
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = SOV
+		target = military_access
+		value = -5000
+	}
+}
+
 ENG_norway_strategy = {
 	enable = {
 		is_in_faction_with = ENG

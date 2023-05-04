@@ -151,6 +151,18 @@ WA_strategic_bomber_strategy = {
 	ai_strategy = { type = equipment_production_min_factories  id = strategic_bomber         	 value = 1 }
 }
 
+WA_strategic_bomber_strategy_fix = {
+	enable = {
+		NOT = {
+			has_country_flag = WA_strategic_bomber_production_flag
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = { type = equipment_variant_production_factor id = strat_bomber_equipment       value = -1000 }
+	ai_strategy = { type = equipment_production_factor id = strategic_bomber					 value = -1000 }
+}
+
 # transport
 WA_TRNS_aircraft_production_strategy = {
 	enable = {
@@ -386,6 +398,7 @@ ENG_highered_bomber_production = {
 		NOT = {
 			has_country_flag = WA_bob_production_flag
 		}
+		has_country_flag = WA_strategic_bomber_production_flag
  		num_of_military_factories > 199
 		date > 1942.1.1
 		has_war = yes
@@ -483,12 +496,16 @@ USA_america_1_bomber_an_hour = {
 	}
 	enable = {
 		num_of_military_factories > 799
+		has_country_flag = WA_strategic_bomber_production_flag
 		NOT = {
 			has_country_flag = WA_fighter_multirole_production_flag
 			has_country_flag = WA_usa_jet_production_flag
 		}
 	}
 	abort = {
+		NOT = {
+			has_country_flag = WA_strategic_bomber_production_flag
+		}
 		OR = {
 			has_country_flag = WA_fighter_multirole_production_flag
 			has_country_flag = WA_usa_jet_production_flag

@@ -2609,7 +2609,7 @@
 
   ger_armor.895.t:0 "[GER.GetName] Asks for peace"
   ger_armor.895.d:0 ""
-  ger_armor.895.a:0 "They have proven there commitment to peace"
+  ger_armor.895.a:0 "They have proven their commitment to peace"
   ger_armor.895.b:0 "We only accept unconditional surrender"
 
   ger_armor.896.t:0 "[FROM.GetName] Accepts Peace"
@@ -2619,6 +2619,12 @@
   ger_armor.897.t:0 "[FROM.GetName] Rejects Peace"
   ger_armor.897.d:0 ""
   ger_armor.897.a:0 "We are now in a worse situation than before..."
+
+  ger_armor.943.t:0 "Germany Offers Peace"
+  ger_armor.943.d:0 "With the Axis achieving victory in Europe and North Africa germany offers peace terms to the UK. Unfortunately, with no major foothold in Europe our chances of winning are slim and perhaps a few years of peace can help us prepare for an eventual victory against the Axis."
+  ger_armor.943.a:0 "We shall accept"
+  ger_armor.943.b:0 "We will never accept defeat"
+  GER_peace_with_uk_tt:0 "Effect: \nWe will sign a white peace with the Axis. \n§GWe will regain control of our North African colonies and iranian oil, the mediterranean islands and all former french colonies will be retained by the Axis.§! \n\n"
 
   germany.998.t:0 "Death of Adolf Hitler"
   germany.998.d:0 "Two Days ago Adolf Hitler suffered a Massive Stroke, he was subsequently rushed to a medical facility but died the following day, the NSDAP now convenes to choose a new Leader."
@@ -3526,7 +3532,7 @@
   usa_armor.896.d:0 "With the possibility of war on the horizon, the President has sought to place an order with GM and DuPont in advance in order to be better equipped. Since GM and DuPont's expertise are primarily in mass production and chemical manufacturing, the best options are either trucks, fighters, or synthetic rubber facilities."
   usa_armor.896.a:0 "We need 200,000 trucks"
   usa_armor.896.b:0 "Fighters will be useful"
-  usa_armor.896.c:0 "Synthetic refineries are desparately needed"
+  usa_armor.896.c:0 "Synthetic refineries are desperately needed"
 
   usa_armor.897.t:0 "JP Morgan Monetary Policy"
   usa_armor.897.d:0 "With the possibility of war on the horizon, the President has sought to decide general monetary policy with JP Morgan in advance in order to be better equipped. Since JP Morgan's influence is far reaching, we can either lower interest rates, restore faith in the system, or use the banking system to sway the public in our favor."

@@ -6120,6 +6120,362 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = ger_armor.943
+	title = ger_armor.943.t
+	desc = ger_armor.943.d
+
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = ger_armor.943.a
+		custom_effect_tooltip = GER_peace_with_uk_tt
+		hidden_effect = {
+			set_global_flag = axis_peace_with_uk
+			every_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				every_state = {
+					limit = {
+						OWNER = {
+							OR = {
+								original_tag = ENG
+								original_tag = FRA
+								original_tag = IRE
+								original_tag = HOL
+								original_tag = BEL
+								original_tag = LUX
+								original_tag = DEN
+								original_tag = NOR
+								original_tag = SWE
+								original_tag = FIN
+								original_tag = SWI
+								original_tag = SPR
+								original_tag = POR
+								original_tag = ITA
+								original_tag = POL
+								original_tag = AUS
+								original_tag = CZE
+								original_tag = HUN
+								original_tag = ROM
+								original_tag = YUG
+								original_tag = ALB
+								original_tag = BUL
+								original_tag = GRE
+								original_tag = TUR
+								#original_tag = LIT
+								#original_tag = LAT
+								#original_tag = EST
+								#original_tag = UKE
+								#original_tag = UKM
+								#original_tag = UKN
+								#original_tag = UKT
+								#original_tag = UKO
+								#original_tag = FRT
+								#original_tag = FRN
+								#original_tag = FRM
+								#original_tag = FRS
+								#original_tag = FRW
+								#original_tag = FRC
+								#original_tag = FRP
+								#original_tag = FRO
+								#original_tag = FRJ
+								#original_tag = FRV
+								#original_tag = FRI
+								original_tag = SOV
+							}
+						}
+						CONTROLLER = {
+							OR = {
+								is_in_faction_with = GER
+								is_subject_of = GER
+								tag = GER
+							}
+						}
+					}
+					CONTROLLER = {
+						transfer_state = PREV
+					}
+				}
+			}
+			every_country = {
+				limit = {
+					has_war_with = GER
+					OR = {
+						is_in_faction_with = THIS
+						is_puppet_of = THIS
+						tag = THIS
+					}
+				}
+				white_peace = GER
+			}
+			#hidden_effect = { news_event = { id = afo_news.13 hours = 6 } }
+			ITA = {
+				remove_wargoal = {
+					type = all
+					target = ENG
+				}
+			}
+			ENG = {
+				remove_wargoal = {
+					type = all
+					target = GER
+				}
+			}
+			ENG = {
+				remove_wargoal = {
+					type = all
+					target = ITA
+				}
+			}
+			USA = {
+				remove_wargoal = {
+					type = all
+					target = GER
+				}
+			}
+			if = {
+				limit = {
+					412 = {
+						has_resources_rights = {
+							receiver = GER
+						}
+					}
+					413 = {
+						has_resources_rights = {
+							receiver = GER
+						}
+					}
+				}
+				GER = {
+					remove_resource_rights = 412
+				}
+				GER = {
+					remove_resource_rights = 413
+				}
+				give_resource_rights = {
+					receiver = ENG
+					state = 412
+				}
+				give_resource_rights = {
+					receiver = ENG
+					state = 413
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						is_in_faction_with = IRQ
+					}
+				}
+				GER = {
+					remove_from_faction = IRQ
+				}
+			}
+			JAP = {
+				remove_ideas = JAP_tripartite_pact
+				diplomatic_relation = {
+					country = ITA
+					relation = guarantee
+					active = no
+				}
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = no
+				}
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = GER
+					relation = guarantee
+					active = no
+				}
+				diplomatic_relation = {
+					country = JAP
+					relation = guarantee
+					active = no
+				}
+			}
+			GER = {
+				if = { 
+					limit = { 
+						has_idea = VIC_aircraft_parts 
+					}
+					remove_ideas = VIC_aircraft_parts
+				}
+				diplomatic_relation = {
+					country = JAP
+					relation = guarantee
+					active = no
+				}
+				diplomatic_relation = {
+					country = ITA
+					relation = guarantee
+					active = no
+				}
+				diplomatic_relation = {
+					country = ENG
+					relation = non_aggression_pact
+					active = yes
+				}
+			}
+			ITA = {
+				diplomatic_relation = {
+					country = ENG
+					relation = non_aggression_pact
+					active = yes
+				}
+				transfer_state = 116
+				transfer_state = 118
+				transfer_state = 183
+				transfer_state = 735
+				set_state_controller = 453
+				set_state_controller= 923
+				set_state_controller = 447
+				set_state_controller = 735
+			}
+			VIC = {
+				transfer_state = 17
+				transfer_state = 27
+				transfer_state = 24
+				transfer_state = 19
+				transfer_state = 23
+				transfer_state = 30
+				transfer_state = 14
+				transfer_state = 15
+				transfer_state = 16
+				transfer_state = 855
+				transfer_state = 18
+				transfer_state = 785
+				transfer_state = 29
+				set_state_controller = 17
+				set_state_controller = 27
+				set_state_controller = 24
+				set_state_controller = 19
+				set_state_controller = 23
+				set_state_controller = 30
+				set_state_controller = 14
+				set_state_controller = 15
+				set_state_controller = 16
+				set_state_controller = 855
+				set_state_controller = 18
+				set_state_controller = 785
+				set_state_controller = 29
+				load_focus_tree = french_focus
+				unlock_national_focus = FRA_revive_the_national_bloc
+				unlock_national_focus = FRA_utilize_the_leagues
+				unlock_national_focus = FRA_national_regeneration
+				unlock_national_focus = FRA_diplomatic_freedom
+				unlock_national_focus = FRA_towards_a_new_europe
+				set_rule = {
+					can_join_factions = yes
+					can_not_declare_war = yes
+					can_create_factions = no
+				}
+				remove_occupation_cost_effect = yes
+				if = {
+					limit = {
+						has_idea = VIC_produce_aircraft_parts
+					}
+					remove_ideas = VIC_produce_aircraft_parts
+				}
+				set_capital = { state = 855 }
+				add_timed_idea = {
+					idea = FRA_up_with_jean_darc
+					days = 730
+				}
+			}
+			ENG = {
+				diplomatic_relation = {
+					country = GER
+					relation = non_aggression_pact
+					active = yes
+				}
+				diplomatic_relation = {
+					country = ITA
+					relation = non_aggression_pact
+					active = yes
+				}
+				annex_country = {
+					target = UKE
+					transfer_troops = no
+				}
+				if = {
+					limit = {
+						OR = {
+							has_dlc = "Together for Victory"
+							has_dlc = "Man the Guns"
+						}
+					}
+					set_autonomy = {
+						target = IRQ
+						autonomy_state = autonomy_integrated_puppet
+					}
+				}
+				else = {
+					puppet = IRQ
+				}
+				diplomatic_relation = {
+					country = SOV
+					relation = guarantee
+					active = no
+				}
+				transfer_state = 453
+				transfer_state = 923
+				transfer_state = 447
+				transfer_state = 452
+				transfer_state = 960
+				transfer_state = 902
+				transfer_state = 446
+				transfer_state = 552
+				transfer_state = 456
+				transfer_state = 457
+				transfer_state = 980
+				transfer_state = 454
+				transfer_state = 981
+				transfer_state = 455
+				transfer_state = 680
+				transfer_state = 677
+				transfer_state = 554
+				transfer_state = 553
+				transfer_state = 656
+				set_state_controller = 453
+				set_state_controller = 923
+				set_state_controller = 447
+				set_state_controller = 452
+				set_state_controller = 960
+				set_state_controller = 902
+				set_state_controller = 446
+				set_state_controller = 552
+				set_state_controller = 456
+				set_state_controller = 457
+				set_state_controller = 980
+				set_state_controller = 454
+				set_state_controller = 981
+				set_state_controller = 455
+				set_state_controller = 680
+				set_state_controller = 677
+				set_state_controller = 554
+				set_state_controller = 553
+				set_state_controller = 656
+			}
+			ai_chance = {
+				base = 1
+			}
+		}
+	}
+	option = {
+		name = ger_armor.943.b
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
 
 
 

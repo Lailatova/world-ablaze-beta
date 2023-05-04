@@ -2705,6 +2705,7 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = JAP_sign_tripartite_pact_bypass_tt
 				OR = {
+					has_global_flag = axis_peace_with_uk
 					AND = {
 						NOT = {
 							any_country = {
