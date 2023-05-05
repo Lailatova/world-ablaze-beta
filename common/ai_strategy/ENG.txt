@@ -3887,6 +3887,15 @@ USA_ENG_sync_invasions_on_europe_1 = {
 	ai_strategy = {
 		type = front_control
 
+		area = finland
+
+		ordertype = invasion
+		execute_order = no
+	}
+
+	ai_strategy = {
+		type = front_control
+
 		area = south_balkans
 
 		ordertype = invasion
@@ -4011,6 +4020,15 @@ USA_ENG_sync_invasions_on_europe_2 = {
 	ai_strategy = {
 		type = front_control
 
+		area = finland
+
+		ordertype = invasion
+		execute_order = no
+	}
+
+	ai_strategy = {
+		type = front_control
+
 		area = south_balkans
 
 		ordertype = invasion
@@ -4127,6 +4145,15 @@ USA_ENG_sync_invasions_on_europe_3 = {
 		type = front_control
 
 		area = scandinavia
+
+		ordertype = invasion
+		execute_order = no
+	}
+
+	ai_strategy = {
+		type = front_control
+
+		area = finland
 
 		ordertype = invasion
 		execute_order = no

@@ -2381,6 +2381,12 @@ war_with_norway = {
 		id = scandinavia
 		value = 50
 	}
+
+	ai_strategy = {
+		type = area_priority
+		id = finland
+		value = 50
+	}
 }
 
 war_with_norway_2 = {
@@ -3360,6 +3366,11 @@ GER_ITA_stop_shuffling = {
 		type = dont_defend_ally_borders
 		id = "PER"
 		value = 1000
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = spain
+		value = -1000
 	}
 }
 
